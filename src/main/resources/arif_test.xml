@@ -1,4 +1,6 @@
-<gmql_new_test>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gmql_new_test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="configuration.xsd">
     <general_config>
         <execution_script>/home/canakoglu/GMQL-test/GMQL/bin/GMQL-Submit</execution_script>
         <root_folder type="LOCAL">/home/canakoglu/GMQL-test/</root_folder>

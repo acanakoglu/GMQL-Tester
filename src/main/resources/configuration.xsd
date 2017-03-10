@@ -1,0 +1,106 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="gmql_new_test" type="gmql_new_testType"/>
+    <xs:complexType name="root_folderType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="temp_folderType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="general_configType">
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element type="xs:string" name="execution_script"/>
+            <xs:element type="root_folderType" name="root_folder"/>
+            <xs:element type="temp_folderType" name="temp_folder">
+                <xs:annotation>
+                    <xs:documentation>not tested for hadoop</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element type="xs:string" name="default_location_type"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="locationType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="datasetType">
+        <xs:sequence>
+            <xs:element type="locationType" name="location"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="datasetsType">
+        <xs:sequence>
+            <xs:element type="datasetType" name="dataset" maxOccurs="unbounded" minOccurs="0">
+                <xs:unique name="unique-location-type">
+                    <xs:selector xpath="location"/>
+                    <xs:field xpath="@type"/>
+                </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tagsType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="tag" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="queryType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="description"/>
+            <xs:element type="tagsType" name="tags"/>
+            <xs:element type="xs:string" name="text"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="name" use="required"/>
+        <xs:attribute name="time" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="short"/>
+                    <xs:enumeration value="long"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute type="xs:string" name="target" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="queriesType">
+        <xs:sequence>
+            <xs:element type="queryType" name="query" maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>target is targeting operation if it is singleton, empty otherwiseTime should be
+                        always defined
+                    </xs:documentation>
+                </xs:annotation>
+
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="gmql_new_testType">
+        <xs:sequence>
+            <xs:element type="general_configType" name="general_config"/>
+            <xs:element type="datasetsType" name="datasets">
+                <xs:unique name="unique-dataset-name">
+                    <xs:selector xpath="dataset"/>
+                    <xs:field xpath="@name"/>
+                </xs:unique>
+            </xs:element>
+            <xs:element type="queriesType" name="queries">
+                <xs:unique name="unique-query-name">
+                    <xs:selector xpath="query"/>
+                    <xs:field xpath="@name"/>
+                </xs:unique>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
