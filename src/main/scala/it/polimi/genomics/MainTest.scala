@@ -18,6 +18,8 @@ import scala.xml._
   */
 object MainTest extends App {
 
+  class SkipException extends Exception
+
   import it.polimi.genomics.DatasetType._
   import it.polimi.genomics.DeltaType._
 
@@ -79,6 +81,8 @@ object MainTest extends App {
           //Execute
           if (!DISABLE_RUN)
             executor.execute(parsedQueryText)
+//          throw new SkipException
+
           //TODO if it has error then stop next step
 
           val datasetXml = outDatasets.map { outDataset =>
@@ -243,7 +247,7 @@ object MainTest extends App {
               {schemaResultXml._1}{sampleResultLimitedXml._1}
             </dataset>, sampleResultLimitedXml._2, schemaResultXml._2)
           }
-          (<query query_name={queryName}>
+          (<query query_name={queryName} query_error={if(datasetXml.foldLeft(0)(_ + _._2) + datasetXml.flatMap(_._3).size >0) "ERROR" else "NO_ERROR"}>
             <query_description>
               {queryDescription}
             </query_description>
@@ -257,6 +261,7 @@ object MainTest extends App {
             datasetXml.foldLeft(0)(_ + _._2), datasetXml.flatMap(_._3)) //
         } catch {
           case e: NoSuchElementException =>
+            logger.warn("NoSuchElementException", e)
             (<query query_name={queryName}>
               <query_description>
                 {queryDescription}
@@ -266,6 +271,19 @@ object MainTest extends App {
               </query_text>
               <error>please check the dataset names in the configuration -
                 {e.getMessage}
+              </error>
+            </query>, //
+              1, List.empty[String]) //
+          case e: SkipException =>
+            logger.info("SkipException")
+            (<query query_name={queryName}>
+              <query_description>
+                {queryDescription}
+              </query_description>
+              <query_text>
+                {queryText}
+              </query_text>
+              <error>skipped
               </error>
             </query>, //
               1, List.empty[String]) //

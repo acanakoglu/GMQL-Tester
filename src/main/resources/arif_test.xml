@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <gmql_new_test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:noNamespaceSchemaLocation="configuration.xsd">
+    <!--
     <general_config>
         <execution_script>/home/canakoglu/GMQL-test/GMQL/bin/GMQL-Submit</execution_script>
         <root_folder type="LOCAL">/home/canakoglu/GMQL-test/</root_folder>
+        <temp_folder type="LOCAL">/tmp/gmql_testing/</temp_folder>
+        <root_folder type="HADOOP">hdfs://</root_folder>
+        <default_location_type>LOCAL</default_location_type>
+    </general_config>
+    -->
+    <general_config>
+        <execution_script>/Users/canakoglu/Documents/GMQL-test/GMQL/bin/GMQL-Submit</execution_script>
+        <root_folder type="LOCAL">/Users/canakoglu/Documents/GMQL-test/</root_folder>
         <temp_folder type="LOCAL">/tmp/gmql_testing/</temp_folder>
         <!--not tested for hadoop-->
         <root_folder type="HADOOP">hdfs://</root_folder>
@@ -27,6 +36,81 @@
         </dataset>
         <dataset name="beds_out_CTCF">
             <location type="LOCAL">datasets/out/beds_CTCF</location>
+        </dataset>
+        <dataset name="beds_out_ctcf">
+            <location type="LOCAL">datasets/out/beds_ctcf2</location>
+        </dataset>
+        <dataset name="beds_out_not_CTCF">
+            <location type="LOCAL">datasets/out/beds_not_CTCF</location>
+        </dataset>
+        <dataset name="beds_out_left_bigger_1000">
+            <location type="LOCAL">datasets/out/beds_left_bigger_1000</location>
+        </dataset>
+        <dataset name="beds_out_left_bigger_1000_less_2000">
+            <location type="LOCAL">datasets/out/beds_left_bigger_1000_less_2000</location>
+        </dataset>
+        <dataset name="beds_out_left_bigger_4000_less_1000">
+            <location type="LOCAL">datasets/out/beds_left_bigger_4000_less_1000</location>
+        </dataset>
+        <dataset name="beds_out_right_less_0">
+            <location type="LOCAL">datasets/out/beds_right_less_0</location>
+        </dataset>
+        <dataset name="beds_out_left_bigger_2000_right_less_4000">
+            <location type="LOCAL">datasets/out/beds_left_bigger_2000_right_less_4000</location>
+        </dataset>
+        <dataset name="beds_out_left_bigger_2000_right_less_1000">
+            <location type="LOCAL">datasets/out/beds_out_left_bigger_2000_right_less_1000</location>
+        </dataset>
+        <dataset name="beds_out_left_less_100_right_bigger_1200">
+            <location type="LOCAL">datasets/out/beds_left_less_100_right_bigger_1200</location>
+        </dataset>
+        <dataset name="beds_out_average_1">
+            <location type="LOCAL">datasets/out/beds_average_1</location>
+        </dataset>
+        <dataset name="beds_out_chr_1">
+            <location type="LOCAL">datasets/out/beds_chr_1</location>
+        </dataset>
+        <dataset name="beds_out_strand_plus">
+            <location type="LOCAL">datasets/out/beds_strand_plus</location>
+        </dataset>
+        <dataset name="beds_out_zeroth_greater_0_7">
+            <location type="LOCAL">datasets/out/beds_zeroth_greater_0_7</location>
+        </dataset>
+        <dataset name="beds_out_score_greater_0_7">
+            <location type="LOCAL">datasets/out/beds_score_greater_0_7</location>
+        </dataset>
+        <dataset name="beds_out_strand_plus_first_gt_0_7">
+            <location type="LOCAL">datasets/out/beds_strand_plus_first_gt_0_7</location>
+        </dataset>
+        <dataset name="beds_out_not_strand_plus">
+            <location type="LOCAL">datasets/out/beds_not_strand_plus</location>
+        </dataset>
+        <dataset name="beds_out_chr_2_or_3">
+            <location type="LOCAL">datasets/out/beds_chr_2_or_3</location>
+        </dataset>
+        <dataset name="beds_out_left_gt_10000_chr_2_or_3">
+            <location type="LOCAL">datasets/out/beds_left_gt_10000_chr_2_or_3</location>
+        </dataset>
+        <dataset name="beds_out_not_chr_2_or_3">
+            <location type="LOCAL">datasets/out/beds_not_chr_2_or_3</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_CTCF">
+            <location type="LOCAL">datasets/out/beds_semijoin_CTCF</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_CTCF_region_chr1">
+            <location type="LOCAL">datasets/out/beds_semijoin_CTCF_region_chr1</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_organism_CTCF_region_chr1">
+            <location type="LOCAL">datasets/out/beds_semijoin_organism_CTCF_region_chr1</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_BRD4">
+            <location type="LOCAL">datasets/out/beds_semijoin_BRD4</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_BRD4_region_chr1">
+            <location type="LOCAL">datasets/out/beds_semijoin_BRD4_region_chr1</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_organism_BRD4_region_chr1">
+            <location type="LOCAL">datasets/out/beds_semijoin_organism_BRD4_region_chr1</location>
         </dataset>
         <dataset name="cover_1_1">
             <location type="LOCAL">datasets/out/cover_1_1</location>
@@ -52,6 +136,201 @@
         <dataset name="cover_ALL_ANY">
             <location type="LOCAL">datasets/out/cover_ALL_ANY</location>
         </dataset>
+        <dataset name="join_distance_lt_1000_left">
+            <location type="LOCAL">datasets/out/join_distance_lt_1000_left</location>
+        </dataset>
+        <dataset name="join_distance_lt_1000_contig">
+            <location type="LOCAL">datasets/out/join_distance_lt_1000_contig</location>
+        </dataset>
+        <dataset name="join_distance_lt_1000_int">
+            <location type="LOCAL">datasets/out/join_distance_lt_1000_int</location>
+        </dataset>
+        <dataset name="join_min_1_right">
+            <location type="LOCAL">datasets/out/join_min_1_right</location>
+        </dataset>
+        <dataset name="join_distance_250_min_1_right">
+            <location type="LOCAL">datasets/out/join_distance_250_min_1_right</location>
+        </dataset>
+        <dataset name="join_distance_250_1000_right">
+            <location type="LOCAL">datasets/out/join_distance_250_1000_right</location>
+        </dataset>
+        <dataset name="map">
+            <location type="LOCAL">datasets/out/map</location>
+        </dataset>
+        <dataset name="map_joinby_antibody">
+            <location type="LOCAL">datasets/out/map_joinby_antibody</location>
+        </dataset>
+        <dataset name="map_joinby_antibody_cell">
+            <location type="LOCAL">datasets/out/map_joinby_antibody_cell</location>
+        </dataset>
+        <dataset name="map_max_score">
+            <location type="LOCAL">datasets/out/map_max_score</location>
+        </dataset>
+        <dataset name="map_min_score">
+            <location type="LOCAL">datasets/out/map_min_score</location>
+        </dataset>
+        <dataset name="map_sum_score">
+            <location type="LOCAL">datasets/out/map_sum_score</location>
+        </dataset>
+        <dataset name="map_avg_score">
+            <location type="LOCAL">datasets/out/map_avg_score</location>
+        </dataset>
+        <dataset name="map_bag_score">
+            <location type="LOCAL">datasets/out/map_bag_score</location>
+        </dataset>
+        <dataset name="map_sum_min_max_score">
+            <location type="LOCAL">datasets/out/map_sum_min_max_score</location>
+        </dataset>
+        <dataset name="map_min_max_score">
+            <location type="LOCAL">datasets/out/map_min_max_score</location>
+        </dataset>
+        <dataset name="order_average_asc">
+            <location type="LOCAL">datasets/out/order_average_asc</location>
+        </dataset>
+        <dataset name="order_average_desc">
+            <location type="LOCAL">datasets/out/order_average_desc</location>
+        </dataset>
+        <dataset name="order_score_asc">
+            <location type="LOCAL">datasets/out/order_score_asc</location>
+        </dataset>
+        <dataset name="order_score_desc">
+            <location type="LOCAL">datasets/out/order_score_desc</location>
+        </dataset>
+        <dataset name="order_average_asc_score_desc">
+            <location type="LOCAL">datasets/out/order_average_asc_score_desc</location>
+        </dataset>
+        <dataset name="order_average_asc_meta_top_1">
+            <location type="LOCAL">datasets/out/order_average_asc_meta_top_1</location>
+        </dataset>
+        <dataset name="order_average_asc_meta_top_2">
+            <location type="LOCAL">datasets/out/order_average_asc_meta_top_2</location>
+        </dataset>
+        <dataset name="order_average_asc_meta_topg_2">
+            <location type="LOCAL">datasets/out/order_average_asc_meta_topg_2</location>
+        </dataset>
+        <dataset name="order_score_desc_meta_top_2">
+            <location type="LOCAL">datasets/out/order_score_desc_meta_top_2</location>
+        </dataset>
+        <dataset name="order_score_desc_meta_topg_2">
+            <location type="LOCAL">datasets/out/order_score_desc_meta_topg_2</location>
+        </dataset>
+        <dataset name="project_1">
+            <location type="LOCAL">datasets/out/project_1</location>
+        </dataset>
+        <dataset name="project_2">
+            <location type="LOCAL">datasets/out/project_2</location>
+        </dataset>
+        <dataset name="project_3">
+            <location type="LOCAL">datasets/out/project_3</location>
+        </dataset>
+        <dataset name="project_4">
+            <location type="LOCAL">datasets/out/project_4</location>
+        </dataset>
+        <dataset name="project_5">
+            <location type="LOCAL">datasets/out/project_5</location>
+        </dataset>
+        <dataset name="project_6">
+            <location type="LOCAL">datasets/out/project_6</location>
+        </dataset>
+        <dataset name="project_7">
+            <location type="LOCAL">datasets/out/project_7</location>
+        </dataset>
+        <dataset name="summit_1">
+            <location type="LOCAL">datasets/out/summit_1</location>
+        </dataset>
+        <dataset name="summit_2">
+            <location type="LOCAL">datasets/out/summit_2</location>
+        </dataset>
+        <dataset name="summit_3">
+            <location type="LOCAL">datasets/out/summit_3</location>
+        </dataset>
+        <dataset name="summit_4">
+            <location type="LOCAL">datasets/out/summit_4</location>
+        </dataset>
+        <dataset name="summit_5">
+            <location type="LOCAL">datasets/out/summit_5</location>
+        </dataset>
+        <dataset name="summit_6">
+            <location type="LOCAL">datasets/out/summit_6</location>
+        </dataset>
+        <dataset name="summit_7">
+            <location type="LOCAL">datasets/out/summit_7</location>
+        </dataset>
+        <dataset name="summit_8">
+            <location type="LOCAL">datasets/out/summit_8</location>
+        </dataset>
+        <dataset name="summit_9">
+            <location type="LOCAL">datasets/out/summit_9</location>
+        </dataset>
+        <dataset name="summit_10">
+            <location type="LOCAL">datasets/out/summit_10</location>
+        </dataset>
+        <dataset name="summit_11">
+            <location type="LOCAL">datasets/out/summit_11</location>
+        </dataset>
+        <dataset name="flat_1">
+            <location type="LOCAL">datasets/out/flat_1</location>
+        </dataset>
+        <dataset name="flat_2">
+            <location type="LOCAL">datasets/out/flat_2</location>
+        </dataset>
+        <dataset name="flat_3">
+            <location type="LOCAL">datasets/out/flat_3</location>
+        </dataset>
+        <dataset name="flat_4">
+            <location type="LOCAL">datasets/out/flat_4</location>
+        </dataset>
+        <dataset name="flat_5">
+            <location type="LOCAL">datasets/out/flat_5</location>
+        </dataset>
+        <dataset name="flat_6">
+            <location type="LOCAL">datasets/out/flat_6</location>
+        </dataset>
+        <dataset name="flat_7">
+            <location type="LOCAL">datasets/out/flat_7</location>
+        </dataset>
+        <dataset name="flat_8">
+            <location type="LOCAL">datasets/out/flat_8</location>
+        </dataset>
+        <dataset name="flat_9">
+            <location type="LOCAL">datasets/out/flat_9</location>
+        </dataset>
+        <dataset name="flat_10">
+            <location type="LOCAL">datasets/out/flat_10</location>
+        </dataset>
+        <dataset name="flat_11">
+            <location type="LOCAL">datasets/out/flat_11</location>
+        </dataset>
+        <dataset name="histogram_1">
+            <location type="LOCAL">datasets/out/histogram_1</location>
+        </dataset>
+        <dataset name="histogram_2">
+            <location type="LOCAL">datasets/out/histogram_2</location>
+        </dataset>
+        <dataset name="histogram_3">
+            <location type="LOCAL">datasets/out/histogram_3</location>
+        </dataset>
+        <dataset name="histogram_4">
+            <location type="LOCAL">datasets/out/histogram_4</location>
+        </dataset>
+        <dataset name="histogram_5">
+            <location type="LOCAL">datasets/out/histogram_5</location>
+        </dataset>
+        <dataset name="histogram_6">
+            <location type="LOCAL">datasets/out/histogram_6</location>
+        </dataset>
+        <dataset name="histogram_7">
+            <location type="LOCAL">datasets/out/histogram_7</location>
+        </dataset>
+        <dataset name="histogram_8">
+            <location type="LOCAL">datasets/out/histogram_8</location>
+        </dataset>
+        <dataset name="histogram_9">
+            <location type="LOCAL">datasets/out/histogram_9</location>
+        </dataset>
+        <dataset name="histogram_10">
+            <location type="LOCAL">datasets/out/histogram_10</location>
+        </dataset>
     </datasets>
     <queries>
         <!--target is targeting operation if it is singleton, empty otherwise-->
@@ -60,6 +339,7 @@
             <description>basic select and materialize test, with one sample</description>
             <tags>
                 <tag>SELECT</tag>
+                <tag>SELECT1</tag>
             </tags>
             <text>
                 R = SELECT() #INPUT%annotations_in#;
@@ -70,6 +350,7 @@
             <description>basic select and materialize test, with parameter NOT</description>
             <tags>
                 <tag>SELECT</tag>
+                <tag>SELECT1</tag>
             </tags>
             <text>
                 R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
@@ -80,6 +361,7 @@
             <description>basic select and materialize test, with multiple samples</description>
             <tags>
                 <tag>SELECT</tag>
+                <tag>SELECT1</tag>
             </tags>
             <text>
                 R = SELECT() #INPUT%beds_in#;
@@ -117,7 +399,263 @@
                 MATERIALIZE R into #OUTPUT%beds_out_CTCF#;
             </text>
         </query>
-        <query name="cover_0" time="short" target="cover">
+        <query name="select_7" time="short" target="select">
+            <description>only ctcf</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(antibody=="ctcf") #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_ctcf#;
+            </text>
+        </query>
+        <query name="select_8" time="short" target="select">
+            <description>not CTCF</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(antibody=="CTCF")) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_not_CTCF#;
+            </text>
+        </query>
+        <query name="select_9" time="short" target="select">
+            <description>SELCT left bigger 1000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: left &gt; 1000) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_bigger_1000#;
+            </text>
+        </query>
+        <query name="select_10" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: left &gt; 1000 and left &lt; 2000) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_bigger_1000_less_2000#;
+            </text>
+        </query>
+        <query name="select_11" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: left &gt; 4000 and left &lt; 1000) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_bigger_4000_less_1000#;
+            </text>
+        </query>
+        <query name="select_12" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: right &lt; 0) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_right_less_0#;
+            </text>
+        </query>
+        <query name="select_13" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: LEFT &gt; 2000 AND RIGHT &lt; 4000 ) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_bigger_2000_right_less_4000#;
+            </text>
+        </query>
+        <query name="select_14" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: LEFT &gt; 2000 AND RIGHT &lt; 1000 ) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_bigger_2000_right_less_1000#;
+            </text>
+        </query>
+        <query name="select_15" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: LEFT &lt; 100 or RIGHT &gt; 1200 ) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_less_100_right_bigger_1200#;
+            </text>
+        </query>
+        <query name="select_16" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(average=="1" ) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_average_1#;
+            </text>
+        </query>
+        <query name="select_17" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_chr_1#;
+            </text>
+        </query>
+        <query name="select_18" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: strand==+) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_strand_plus#;
+            </text>
+        </query>
+        <query name="select_19" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: $0>0.7) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_zeroth_greater_0_7#;
+            </text>
+        </query>
+        <query name="select_20" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: score>0.7) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_score_greater_0_7#;
+            </text>
+        </query>
+        <query name="select_21" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: STRAND == + AND $1 &gt; 0.7 ) #INPUT%annotations_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_strand_plus_first_gt_0_7#;
+            </text>
+        </query>
+        <query name="select_22" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: NOT(STRAND == + ) ) #INPUT%annotations_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_not_strand_plus#;
+            </text>
+        </query>
+        <query name="select_23" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: chr==chr2 or chr==chr3) #INPUT%annotations_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_chr_2_or_3#;
+            </text>
+        </query>
+        <query name="select_24" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: NOT(chr==chr2 or chr==chr3)) #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_not_chr_2_or_3#;
+            </text>
+        </query>
+        <query name="select_25" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                S = SELECT(region: LEFT &gt; 10000 AND (CHR == chr1 OR CHR == chr2) AND STRAND == * )#INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_left_gt_10000_chr_2_or_3#;
+            </text>
+        </query>
+        <query name="select_26" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="CTCF") #INPUT%annotations_in#;
+                B = SELECT(semijoin: antibody in A) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_CTCF#;
+            </text>
+        </query>
+        <query name="select_27" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="CTCF") #INPUT%annotations_in#;
+                B = SELECT(semijoin: antibody in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_CTCF_region_chr1#;
+            </text>
+        </query>
+        <query name="select_28" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="CTCF") #INPUT%annotations_in#;
+                B = SELECT(semijoin: organism,antibody in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_organism_CTCF_region_chr1#;
+            </text>
+        </query>
+        <query name="select_26-1" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
+                B = SELECT(semijoin: antibody in A) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_BRD4#;
+            </text>
+        </query>
+        <query name="select_27-1" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
+                B = SELECT(semijoin: antibody in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_BRD4_region_chr1#;
+            </text>
+        </query>
+        <query name="select_28-1" time="short" target="select">
+            <description>SELECT left bigger 1000 and less than 2000</description>
+            <tags>
+                <tag>SELECT</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
+                B = SELECT(semijoin: organism,antibody in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_organism_BRD4_region_chr1#;
+            </text>
+        </query>
+        <query name="cover_1" time="short" target="cover">
             <description>COVER(1,1)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -130,7 +668,7 @@
                 MATERIALIZE C into #OUTPUT%cover_1_1#;
             </text>
         </query>
-        <query name="cover_1" time="short" target="cover">
+        <query name="cover_2" time="short" target="cover">
             <description>COVER(1,2)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -143,7 +681,7 @@
                 MATERIALIZE C into #OUTPUT%cover_1_2#;
             </text>
         </query>
-        <query name="cover_2" time="short" target="cover">
+        <query name="cover_3" time="short" target="cover">
             <description>COVER(2,2)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -155,7 +693,7 @@
                 MATERIALIZE C into #OUTPUT%cover_2_2#;
             </text>
         </query>
-        <query name="cover_3" time="short" target="cover">
+        <query name="cover_4" time="short" target="cover">
             <description>COVER(1,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -167,7 +705,7 @@
                 MATERIALIZE C into #OUTPUT%cover_1_ANY#;
             </text>
         </query>
-        <query name="cover_4" time="short" target="cover">
+        <query name="cover_5" time="short" target="cover">
             <description>COVER(1,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -180,7 +718,7 @@
                 MATERIALIZE C into #OUTPUT%cover_1_ALL#;
             </text>
         </query>
-        <query name="cover_5" time="short" target="cover">
+        <query name="cover_6" time="short" target="cover">
             <description>COVER(ANY,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -192,7 +730,7 @@
                 MATERIALIZE C into #OUTPUT%cover_ANY_ANY#;
             </text>
         </query>
-        <query name="cover_6" time="short" target="cover">
+        <query name="cover_7" time="short" target="cover">
             <description>COVER(ANY,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -204,7 +742,7 @@
                 MATERIALIZE C into #OUTPUT%cover_ANY_ALL#;
             </text>
         </query>
-        <query name="cover_7" time="short" target="cover">
+        <query name="cover_8" time="short" target="cover">
             <description>COVER(ALL,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
@@ -214,6 +752,801 @@
                 E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
                 C = COVER(ALL,ANY) E;
                 MATERIALIZE C into #OUTPUT%cover_ALL_ANY#;
+            </text>
+        </query>
+        <query name="join_1" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>
+                A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(distance &lt; 1000; output:left) S A;
+                MATERIALIZE J into #OUTPUT%join_distance_lt_1000_left#;
+            </text>
+        </query>
+        <query name="join_2" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>
+                A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(distance &lt; 1000; output:contig) S A;
+                MATERIALIZE J into #OUTPUT%join_distance_lt_1000_contig#;
+            </text>
+        </query>
+        <query name="join_3" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>
+                A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(distance &lt; 1000; output:int) A S;
+                MATERIALIZE J into #OUTPUT%join_distance_lt_1000_int#;
+            </text>
+        </query>
+        <query name="join_4" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(minDistance(1); output:right) A S;
+                MATERIALIZE J into #OUTPUT%join_min_1_right#;
+            </text>
+        </query>
+        <query name="join_5" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>
+                A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(distance &gt; 250,minDistance(1); output:right) A S;
+                MATERIALIZE J into #OUTPUT%join_distance_250_min_1_right#;
+            </text>
+        </query>
+        <query name="join_6" time="short" target="join">
+            <description>COVER(ALL,ANY)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+            </tags>
+            <text>
+                A = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                J = JOIN(distance &lt; 1000,distance &gt; 100; output:right) A S;
+                MATERIALIZE J into #OUTPUT%join_distance_250_1000_right#;
+            </text>
+        </query>
+        <query name="map_1" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP() R E;
+                MATERIALIZE M into #OUTPUT%map#;
+            </text>
+        </query>
+        <query name="map_2" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(JOINBY: antibody) R E;
+                MATERIALIZE M into #OUTPUT%map_joinby_antibody#;
+            </text>
+        </query>
+        <query name="map_3" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something"))#INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(JOINBY: antibody,cell) R E;
+                MATERIALIZE M into #OUTPUT%map_joinby_antibody_cell#;
+            </text>
+        </query>
+        <query name="map_4" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(maxi AS MAX(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_max_score#;
+            </text>
+        </query>
+        <query name="map_5" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(minzi AS MIN(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_min_score#;
+            </text>
+        </query>
+        <query name="map_6" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(summa AS SUM(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_sum_score#;
+            </text>
+        </query>
+        <query name="map_7" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(aggregazione AS AVG(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_avg_score#;
+            </text>
+        </query>
+        <query name="map_8" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(bababa AS BAG(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_bag_score#;
+            </text>
+        </query>
+        <query name="map_9" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(summa AS SUM(score), minzi AS MIN(score), maxi AS MAX(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_sum_min_max_score#;
+            </text>
+        </query>
+        <query name="map_10" time="short" target="map">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MAP</tag>
+            </tags>
+            <text>
+                R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                M = MAP(minimum as MIN(score),maximum as MAX(score)) R E;
+                MATERIALIZE M into #OUTPUT%map_min_max_score#;
+            </text>
+        </query>
+        <query name="order_1" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc#;
+            </text>
+        </query>
+        <query name="order_2" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average DESC) E;
+                MATERIALIZE O into #OUTPUT%order_average_desc#;
+            </text>
+        </query>
+        <query name="order_3" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score ASC) E;
+                MATERIALIZE O into #OUTPUT%order_score_asc#;
+            </text>
+        </query>
+        <query name="order_4" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score DESC) E;
+                MATERIALIZE O into #OUTPUT%order_score_desc#;
+            </text>
+        </query>
+        <query name="order_5" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; region_order: score DESC) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_score_desc#;
+            </text>
+        </query>
+        <query name="order_6" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; meta_top: 1 ) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_meta_top_1#;
+            </text>
+        </query>
+        <query name="order_7" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; meta_top: 2 ) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_meta_top_2#;
+            </text>
+        </query>
+        <query name="order_8" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; meta_topg: 2 ) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_meta_topg_2#;
+            </text>
+        </query>
+        <query name="order_9" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score DESC; meta_top: 2) E;
+                MATERIALIZE O into #OUTPUT%order_score_desc_meta_top_2#;
+            </text>
+        </query>
+        <query name="order_10" time="short" target="order">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score DESC; meta_topg: 2) E;
+                MATERIALIZE O into #OUTPUT%order_score_desc_meta_topg_2#;
+            </text>
+        </query>
+        <query name="project_1" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                P = PROJECT(region_update: left AS right -100, dist AS right - left, doppio as score * 2) S;
+                MATERIALIZE P into #OUTPUT%project_1#;
+            </text>
+        </query>
+        <query name="project_2" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                P = PROJECT(metadata: antibody) S;
+                MATERIALIZE P into #OUTPUT%project_2#;
+            </text>
+        </query>
+        <query name="project_3" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                P = PROJECT(metadata: cell,antibody) S;
+                MATERIALIZE P into #OUTPUT%project_3#;
+            </text>
+        </query>
+        <query name="project_4" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                P = PROJECT(score) S;
+                MATERIALIZE P into #OUTPUT%project_4#;
+            </text>
+        </query>
+        <query name="project_5" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                P = PROJECT($1,$0) S;
+                MATERIALIZE P into #OUTPUT%project_5#;
+            </text>
+        </query>
+        <query name="project_6" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                P = PROJECT(score,score,score) S;
+                MATERIALIZE P into #OUTPUT%project_6#;
+            </text>
+        </query>
+        <query name="project_7" time="short" target="project">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>PROJECT</tag>
+            </tags>
+            <text>
+                S = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
+                P = PROJECT($1; metadata: cell,antibody) S;
+                MATERIALIZE P into #OUTPUT%project_7#;
+            </text>
+        </query>
+        <query name="summit_1" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,2) E;
+                MATERIALIZE C into #OUTPUT%summit_1#;
+            </text>
+        </query>
+        <query name="summit_2" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(2,2) E;
+                MATERIALIZE C into #OUTPUT%summit_2#;
+            </text>
+        </query>
+        <query name="summit_3" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,ANY) E;
+                MATERIALIZE C into #OUTPUT%summit_3#;
+            </text>
+        </query>
+        <query name="summit_4" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,ALL) E;
+                MATERIALIZE C into #OUTPUT%summit_4#;
+            </text>
+        </query>
+        <query name="summit_5" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(ANY,ANY) E;
+                MATERIALIZE C into #OUTPUT%summit_5#;
+            </text>
+        </query>
+        <query name="summit_6" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(ANY,ALL) E;
+                MATERIALIZE C into #OUTPUT%summit_6#;
+            </text>
+        </query>
+        <query name="summit_7" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(ALL,ANY) E;
+                MATERIALIZE C into #OUTPUT%summit_7#;
+            </text>
+        </query>
+        <query name="summit_8" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,3; GROUPBY: antibody) E;
+                MATERIALIZE C into #OUTPUT%summit_8#;
+            </text>
+        </query>
+        <query name="summit_9" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,3; GROUPBY: antibody,cell) E;
+                MATERIALIZE C into #OUTPUT%summit_9#;
+            </text>
+        </query>
+        <query name="summit_10" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,3; GROUPBY: antibody,cell;aggregate: SUM(score)) E;
+                MATERIALIZE C into #OUTPUT%summit_10#;
+            </text>
+        </query>
+        <query name="summit_11" time="short" target="summit">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>SUMMIT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = SUMMIT(1,3; GROUPBY: antibody,cell; aggregate: SUM(score),MIN(score)) E;
+                MATERIALIZE C into #OUTPUT%summit_11#;
+            </text>
+        </query>
+        <query name="flat_1" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,2) E;
+                MATERIALIZE C into #OUTPUT%flat_1#;
+            </text>
+        </query>
+        <query name="flat_2" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(2,2) E;
+                MATERIALIZE C into #OUTPUT%flat_2#;
+            </text>
+        </query>
+        <query name="flat_3" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,ANY) E;
+                MATERIALIZE C into #OUTPUT%flat_3#;
+            </text>
+        </query>
+        <query name="flat_4" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,ALL) E;
+                MATERIALIZE C into #OUTPUT%flat_4#;
+            </text>
+        </query>
+        <query name="flat_5" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(ANY,ANY) E;
+                MATERIALIZE C into #OUTPUT%flat_5#;
+            </text>
+        </query>
+        <query name="flat_6" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(ANY,ALL) E;
+                MATERIALIZE C into #OUTPUT%flat_6#;
+            </text>
+        </query>
+        <query name="flat_7" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(ALL,ANY) E;
+                MATERIALIZE C into #OUTPUT%flat_7#;
+            </text>
+        </query>
+        <query name="flat_8" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,3; GROUPBY: antibody) E;
+                MATERIALIZE C into #OUTPUT%flat_8#;
+            </text>
+        </query>
+        <query name="flat_9" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,3; GROUPBY: antibody,cell) E;
+                MATERIALIZE C into #OUTPUT%flat_9#;
+            </text>
+        </query>
+        <query name="flat_10" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,3;GROUPBY: antibody,cell; aggregate: SUM(score)) E;
+                MATERIALIZE C into #OUTPUT%flat_10#;
+            </text>
+        </query>
+        <query name="flat_11" time="short" target="flat">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>FLAT</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = FLAT(1,3;GROUPBY: antibody,cell;aggregate: SUM(score),MIN(score)) E;
+                MATERIALIZE C into #OUTPUT%flat_11#;
+            </text>
+        </query>
+        <query name="histogram_1" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,2) E;
+                MATERIALIZE C into #OUTPUT%histogram_1#;
+            </text>
+        </query>
+        <query name="histogram_2" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,ANY) E;
+                MATERIALIZE C into #OUTPUT%histogram_2#;
+            </text>
+        </query>
+        <query name="histogram_3" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,ALL) E;
+                MATERIALIZE C into #OUTPUT%histogram_3#;
+            </text>
+        </query>
+        <query name="histogram_4" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(ANY,ANY) E;
+                MATERIALIZE C into #OUTPUT%histogram_4#;
+            </text>
+        </query>
+        <query name="histogram_5" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(ANY,ALL) E;
+                MATERIALIZE C into #OUTPUT%histogram_5#;
+            </text>
+        </query>
+        <query name="histogram_6" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(ALL,ANY) E;
+                MATERIALIZE C into #OUTPUT%histogram_6#;
+            </text>
+        </query>
+        <query name="histogram_7" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,3; GROUPBY: antibody) E;
+                MATERIALIZE C into #OUTPUT%histogram_7#;
+            </text>
+        </query>
+        <query name="histogram_8" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,3; GROUPBY: antibody,cell) E;
+                MATERIALIZE C into #OUTPUT%histogram_8#;
+            </text>
+        </query>
+        <query name="histogram_9" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,3;GROUPBY: antibody,cell;aggregate: SUM(score)) E;
+                MATERIALIZE C into #OUTPUT%histogram_9#;
+            </text>
+        </query>
+        <query name="histogram_10" time="short" target="histogram">
+            <description>--</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>HISTOGRAM</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = HISTOGRAM(1,3;GROUPBY: antibody,cell; aggregate: SUM(score),MIN(score)) E;
+                MATERIALIZE C into #OUTPUT%histogram_10#;
             </text>
         </query>
     </queries>
