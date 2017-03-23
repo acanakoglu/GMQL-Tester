@@ -73,6 +73,9 @@
         <dataset name="beds_out_strand_plus">
             <location type="LOCAL">datasets/out/beds_strand_plus</location>
         </dataset>
+        <dataset name="beds_out_name_chr11">
+            <location type="LOCAL">datasets/out/beds_name_chr11</location>
+        </dataset>
         <dataset name="beds_out_zeroth_greater_0_7">
             <location type="LOCAL">datasets/out/beds_zeroth_greater_0_7</location>
         </dataset>
@@ -103,6 +106,9 @@
         <dataset name="beds_out_semijoin_organism_CTCF_region_chr1">
             <location type="LOCAL">datasets/out/beds_semijoin_organism_CTCF_region_chr1</location>
         </dataset>
+        <dataset name="beds_out_semijoin_type_avg_CTCF_region_chr1">
+            <location type="LOCAL">datasets/out/beds_out_semijoin_type_avg_CTCF_region_chr1</location>
+        </dataset>
         <dataset name="beds_out_semijoin_BRD4">
             <location type="LOCAL">datasets/out/beds_semijoin_BRD4</location>
         </dataset>
@@ -111,6 +117,9 @@
         </dataset>
         <dataset name="beds_out_semijoin_organism_BRD4_region_chr1">
             <location type="LOCAL">datasets/out/beds_semijoin_organism_BRD4_region_chr1</location>
+        </dataset>
+        <dataset name="beds_out_semijoin_type_avg_BRD4_region_chr1">
+            <location type="LOCAL">datasets/out/beds_out_semijoin_type_avg_BRD4_region_chr1</location>
         </dataset>
         <dataset name="cover_1_1">
             <location type="LOCAL">datasets/out/cover_1_1</location>
@@ -154,6 +163,9 @@
         <dataset name="join_distance_250_1000_right">
             <location type="LOCAL">datasets/out/join_distance_250_1000_right</location>
         </dataset>
+        <dataset name="join_dle_int_cell">
+            <location type="LOCAL">datasets/out/join_dle_int_cell</location>
+        </dataset>
         <dataset name="map">
             <location type="LOCAL">datasets/out/map</location>
         </dataset>
@@ -184,6 +196,9 @@
         <dataset name="map_min_max_score">
             <location type="LOCAL">datasets/out/map_min_max_score</location>
         </dataset>
+        <dataset name="order_average">
+            <location type="LOCAL">datasets/out/order_average</location>
+        </dataset>
         <dataset name="order_average_asc">
             <location type="LOCAL">datasets/out/order_average_asc</location>
         </dataset>
@@ -192,6 +207,9 @@
         </dataset>
         <dataset name="order_score_asc">
             <location type="LOCAL">datasets/out/order_score_asc</location>
+        </dataset>
+        <dataset name="order_score">
+            <location type="LOCAL">datasets/out/order_score</location>
         </dataset>
         <dataset name="order_score_desc">
             <location type="LOCAL">datasets/out/order_score_desc</location>
@@ -213,6 +231,21 @@
         </dataset>
         <dataset name="order_score_desc_meta_topg_2">
             <location type="LOCAL">datasets/out/order_score_desc_meta_topg_2</location>
+        </dataset>
+        <dataset name="order_average_asc_region_top_2">
+            <location type="LOCAL">datasets/out/order_average_asc_region_top_2</location>
+        </dataset>
+
+        <dataset name="order_average_asc_region_topg_2">
+            <location type="LOCAL">datasets/out/order_average_asc_region_topg_2</location>
+        </dataset>
+
+        <dataset name="order_score_desc_region_top_2">
+            <location type="LOCAL">datasets/out/order_score_desc_region_top_2</location>
+        </dataset>
+
+        <dataset name="order_score_desc_region_topg_2">
+            <location type="LOCAL">datasets/out/order_score_desc_region_topg_2</location>
         </dataset>
         <dataset name="project_1">
             <location type="LOCAL">datasets/out/project_1</location>
@@ -331,6 +364,12 @@
         <dataset name="histogram_10">
             <location type="LOCAL">datasets/out/histogram_10</location>
         </dataset>
+        <dataset name="merge_1">
+            <location type="LOCAL">datasets/out/merge_1</location>
+        </dataset>
+        <dataset name="merge_2">
+            <location type="LOCAL">datasets/out/merge_2</location>
+        </dataset>
     </datasets>
     <queries>
         <!--target is targeting operation if it is singleton, empty otherwise-->
@@ -369,7 +408,7 @@
             </text>
         </query>
         <query name="select_4" time="short" target="select">
-            <description>basic select and materialize test, with parameter NOT and materialize two times</description>
+            <description>basic select and materialize two times</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -420,7 +459,7 @@
             </text>
         </query>
         <query name="select_9" time="short" target="select">
-            <description>SELCT left bigger 1000</description>
+            <description>SELECT left bigger 1000</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -440,7 +479,7 @@
             </text>
         </query>
         <query name="select_11" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT left bigger 4000 and less than 1000</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -450,7 +489,7 @@
             </text>
         </query>
         <query name="select_12" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT right less than 0</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -460,7 +499,7 @@
             </text>
         </query>
         <query name="select_13" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT left bigger 2000 and right less than 4000</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -470,7 +509,7 @@
             </text>
         </query>
         <query name="select_14" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT left bigger than 2000 and right less than 1000</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -480,7 +519,7 @@
             </text>
         </query>
         <query name="select_15" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT left less then 100 or right bigger than 1200</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -490,7 +529,7 @@
             </text>
         </query>
         <query name="select_16" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT samples with metadata average equal to 1</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -500,7 +539,7 @@
             </text>
         </query>
         <query name="select_17" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions related to chromosome 1</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -510,7 +549,7 @@
             </text>
         </query>
         <query name="select_18" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions of positive strand</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -519,8 +558,19 @@
                 MATERIALIZE S into #OUTPUT%beds_out_strand_plus#;
             </text>
         </query>
+        <query name="select_18a" time="short" target="select">
+            <description>SELECT regions with specific name</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                S = SELECT(region: name=="chr1.1") #INPUT%beds_in#;
+                MATERIALIZE S into #OUTPUT%beds_out_name_chr11#;
+            </text>
+        </query>
         <query name="select_19" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions with first attribute>0.7</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -530,7 +580,7 @@
             </text>
         </query>
         <query name="select_20" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions with score attribute>0.7</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -540,7 +590,7 @@
             </text>
         </query>
         <query name="select_21" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions of positive strand with first attribute>0.7</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -550,7 +600,7 @@
             </text>
         </query>
         <query name="select_22" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions with non positive strand</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -560,7 +610,7 @@
             </text>
         </query>
         <query name="select_23" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions of chromosome 2 or 3</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -570,7 +620,7 @@
             </text>
         </query>
         <query name="select_24" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT regions of chromosomes different from 2 and 3</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -580,17 +630,17 @@
             </text>
         </query>
         <query name="select_25" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT left bigger than 10000, chromosome 2 or 3, positive strand</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
             <text>
-                S = SELECT(region: LEFT &gt; 10000 AND (CHR == chr1 OR CHR == chr2) AND STRAND == * )#INPUT%beds_in#;
+                S = SELECT(region: LEFT &gt; 10000 AND (CHR == chr2 OR CHR == chr3) AND STRAND == * )#INPUT%beds_in#;
                 MATERIALIZE S into #OUTPUT%beds_out_left_gt_10000_chr_2_or_3#;
             </text>
         </query>
         <query name="select_26" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT empty on antibody</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -601,7 +651,7 @@
             </text>
         </query>
         <query name="select_27" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT empty on antibody</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -612,7 +662,7 @@
             </text>
         </query>
         <query name="select_28" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT empty on antibody</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -622,8 +672,20 @@
                 MATERIALIZE B into #OUTPUT%beds_out_semijoin_organism_CTCF_region_chr1#;
             </text>
         </query>
+        <query name="select_28a" time="short" target="select">
+            <description>SELECT empty on antibody</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="CTCF") #INPUT%annotations_in#;
+                B = SELECT(semijoin: type,average in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_type_avg_CTCF_region_chr1#;
+            </text>
+        </query>
         <query name="select_26-1" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT BRD4 annotations, regions from same antibody</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -634,7 +696,7 @@
             </text>
         </query>
         <query name="select_27-1" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT BRD4 annotations, regions from same antibody, of chromosome 1</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -645,7 +707,7 @@
             </text>
         </query>
         <query name="select_28-1" time="short" target="select">
-            <description>SELECT left bigger 1000 and less than 2000</description>
+            <description>SELECT BRD4 annotations, regions from same antibody and organism, of chromosome 1</description>
             <tags>
                 <tag>SELECT</tag>
             </tags>
@@ -653,6 +715,18 @@
                 A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
                 B = SELECT(semijoin: organism,antibody in A; region: chr == chr1) #INPUT%beds_in#;
                 MATERIALIZE B into #OUTPUT%beds_out_semijoin_organism_BRD4_region_chr1#;
+            </text>
+        </query>
+        <query name="select_28-1a" time="short" target="select">
+            <description>SELECT BRD4 annotations, regions from same type and average, of chromosome 1</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
+                B = SELECT(semijoin: type,average in A; region: chr == chr1) #INPUT%beds_in#;
+                MATERIALIZE B into #OUTPUT%beds_out_semijoin_type_avg_BRD4_region_chr1#;
             </text>
         </query>
         <query name="cover_1" time="short" target="cover">
@@ -755,7 +829,7 @@
             </text>
         </query>
         <query name="join_1" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(distance &lt; 1000; output:left)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -768,7 +842,7 @@
             </text>
         </query>
         <query name="join_2" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(distance &lt; 1000; output:contig)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -781,7 +855,7 @@
             </text>
         </query>
         <query name="join_3" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(distance &lt; 1000; output:int)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -794,7 +868,7 @@
             </text>
         </query>
         <query name="join_4" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(minDistance(1); output:right)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -806,7 +880,7 @@
             </text>
         </query>
         <query name="join_5" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(distance > 250,minDistance(1); output:right)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -819,7 +893,7 @@
             </text>
         </query>
         <query name="join_6" time="short" target="join">
-            <description>COVER(ALL,ANY)</description>
+            <description>JOIN(distance &lt; 1000,distance > 100; output:right)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>JOIN</tag>
@@ -831,8 +905,22 @@
                 MATERIALIZE J into #OUTPUT%join_distance_250_1000_right#;
             </text>
         </query>
+        <query name="join_7" time="short" target="join">
+            <description>JOIN complex</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>JOIN</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                A = SELECT(antibody=="BRD4") #INPUT%annotations_in#;
+                B = SELECT(semijoin: type,average in A; region: chr == chr1) #INPUT%beds_in#;
+                C = JOIN(DLE(-1); output: INT; joinby: cell) A B;
+                MATERIALIZE C into #OUTPUT%join_dle_int_cell#;
+            </text>
+        </query>
         <query name="map_1" time="short" target="map">
-            <description>--</description>
+            <description>MAP()</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -845,7 +933,7 @@
             </text>
         </query>
         <query name="map_2" time="short" target="map">
-            <description>--</description>
+            <description>MAP(JOINBY: antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -858,7 +946,7 @@
             </text>
         </query>
         <query name="map_3" time="short" target="map">
-            <description>--</description>
+            <description>MAP(JOINBY: antibody,cell)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -871,7 +959,7 @@
             </text>
         </query>
         <query name="map_4" time="short" target="map">
-            <description>--</description>
+            <description>MAP(maxi AS MAX(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -884,7 +972,7 @@
             </text>
         </query>
         <query name="map_5" time="short" target="map">
-            <description>--</description>
+            <description>MAP(minzi AS MIN(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -897,7 +985,7 @@
             </text>
         </query>
         <query name="map_6" time="short" target="map">
-            <description>--</description>
+            <description>MAP(summa AS SUM(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -910,7 +998,7 @@
             </text>
         </query>
         <query name="map_7" time="short" target="map">
-            <description>--</description>
+            <description>MAP(media AS AVG(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -918,12 +1006,12 @@
             <text>
                 R = SELECT(NOT(leaveout=="something")) #INPUT%annotations_in#;
                 E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
-                M = MAP(aggregazione AS AVG(score)) R E;
+                M = MAP(media AS AVG(score)) R E;
                 MATERIALIZE M into #OUTPUT%map_avg_score#;
             </text>
         </query>
         <query name="map_8" time="short" target="map">
-            <description>--</description>
+            <description>MAP(bababa AS BAG(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -936,7 +1024,7 @@
             </text>
         </query>
         <query name="map_9" time="short" target="map">
-            <description>--</description>
+            <description>MAP(summa AS SUM(score), minzi AS MIN(score), maxi AS MAX(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -949,7 +1037,7 @@
             </text>
         </query>
         <query name="map_10" time="short" target="map">
-            <description>--</description>
+            <description>MAP(minimum as MIN(score),maximum as MAX(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>MAP</tag>
@@ -961,8 +1049,21 @@
                 MATERIALIZE M into #OUTPUT%map_min_max_score#;
             </text>
         </query>
+        <query name="order_0" time="short" target="order">
+            <description>ORDER(average) default ASC</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average) E;
+                MATERIALIZE O into #OUTPUT%order_average#;
+            </text>
+        </query>
         <query name="order_1" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(average ASC)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -974,7 +1075,7 @@
             </text>
         </query>
         <query name="order_2" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(average DESC)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -986,7 +1087,7 @@
             </text>
         </query>
         <query name="order_3" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(region_order: score ASC)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -997,8 +1098,21 @@
                 MATERIALIZE O into #OUTPUT%order_score_asc#;
             </text>
         </query>
+        <query name="order_3a" time="short" target="order">
+            <description>ORDER(region_order: score) default ASC</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score) E;
+                MATERIALIZE O into #OUTPUT%order_score#;
+            </text>
+        </query>
         <query name="order_4" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(region_order: score DESC)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1010,7 +1124,7 @@
             </text>
         </query>
         <query name="order_5" time="short" target="order">
-            <description>--</description>
+            <description>ORDER combined on metadata and region</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1022,7 +1136,7 @@
             </text>
         </query>
         <query name="order_6" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(average ASC; meta_top: 1 )</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1034,7 +1148,7 @@
             </text>
         </query>
         <query name="order_7" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(average ASC; meta_top: 2 )</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1046,7 +1160,7 @@
             </text>
         </query>
         <query name="order_8" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(average ASC; meta_topg: 2 )</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1058,7 +1172,7 @@
             </text>
         </query>
         <query name="order_9" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(region_order: score DESC; meta_top: 2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1070,7 +1184,7 @@
             </text>
         </query>
         <query name="order_10" time="short" target="order">
-            <description>--</description>
+            <description>ORDER(region_order: score DESC; meta_topg: 2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>ORDER</tag>
@@ -1081,8 +1195,60 @@
                 MATERIALIZE O into #OUTPUT%order_score_desc_meta_topg_2#;
             </text>
         </query>
+        <query name="order_11" time="short" target="order">
+            <description>ORDER(average ASC; region_top: 2 )</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; region_top: 2 ) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_region_top_2#;
+            </text>
+        </query>
+        <query name="order_12" time="short" target="order">
+            <description>ORDER(average ASC; region_topg: 2 )</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(average ASC; region_topg: 2 ) E;
+                MATERIALIZE O into #OUTPUT%order_average_asc_region_topg_2#;
+            </text>
+        </query>
+        <query name="order_13" time="short" target="order">
+            <description>ORDER(region_order: score DESC; region_top: 2)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score DESC; region_top: 2) E;
+                MATERIALIZE O into #OUTPUT%order_score_desc_region_top_2#;
+            </text>
+        </query>
+        <query name="order_14" time="short" target="order">
+            <description>ORDER(region_order: score DESC; region_topg: 2)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>ORDER</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                O = ORDER(region_order: score DESC; region_topg: 2) E;
+                MATERIALIZE O into #OUTPUT%order_score_desc_region_topg_2#;
+            </text>
+        </query>
         <query name="project_1" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT(region_update: left AS right -100, dist AS right - left, doppio as score * 2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1094,7 +1260,7 @@
             </text>
         </query>
         <query name="project_2" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT(metadata: antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1106,7 +1272,7 @@
             </text>
         </query>
         <query name="project_3" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT(metadata: cell,antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1118,7 +1284,7 @@
             </text>
         </query>
         <query name="project_4" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT(score)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1130,7 +1296,7 @@
             </text>
         </query>
         <query name="project_5" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT($1,$0)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1142,7 +1308,7 @@
             </text>
         </query>
         <query name="project_6" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT(score,score,score)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1154,7 +1320,7 @@
             </text>
         </query>
         <query name="project_7" time="short" target="project">
-            <description>--</description>
+            <description>PROJECT($1; metadata: cell,antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>PROJECT</tag>
@@ -1166,7 +1332,7 @@
             </text>
         </query>
         <query name="summit_1" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1178,7 +1344,7 @@
             </text>
         </query>
         <query name="summit_2" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(2,2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1190,7 +1356,7 @@
             </text>
         </query>
         <query name="summit_3" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1202,7 +1368,7 @@
             </text>
         </query>
         <query name="summit_4" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1214,7 +1380,7 @@
             </text>
         </query>
         <query name="summit_5" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(ANY,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1226,7 +1392,7 @@
             </text>
         </query>
         <query name="summit_6" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(ANY,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1238,7 +1404,7 @@
             </text>
         </query>
         <query name="summit_7" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(ALL,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1250,7 +1416,7 @@
             </text>
         </query>
         <query name="summit_8" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,3; GROUPBY: antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1262,7 +1428,7 @@
             </text>
         </query>
         <query name="summit_9" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,3; GROUPBY: antibody,cell)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1274,7 +1440,7 @@
             </text>
         </query>
         <query name="summit_10" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,3; GROUPBY: antibody,cell;aggregate: SUM(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1286,7 +1452,7 @@
             </text>
         </query>
         <query name="summit_11" time="short" target="summit">
-            <description>--</description>
+            <description>SUMMIT(1,3; GROUPBY: antibody,cell; aggregate: SUM(score),MIN(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>SUMMIT</tag>
@@ -1298,7 +1464,7 @@
             </text>
         </query>
         <query name="flat_1" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1310,7 +1476,7 @@
             </text>
         </query>
         <query name="flat_2" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(2,2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1322,7 +1488,7 @@
             </text>
         </query>
         <query name="flat_3" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1334,7 +1500,7 @@
             </text>
         </query>
         <query name="flat_4" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1346,7 +1512,7 @@
             </text>
         </query>
         <query name="flat_5" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(ANY,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1358,7 +1524,7 @@
             </text>
         </query>
         <query name="flat_6" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(ANY,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1370,7 +1536,7 @@
             </text>
         </query>
         <query name="flat_7" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(ALL,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1382,7 +1548,7 @@
             </text>
         </query>
         <query name="flat_8" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,3; GROUPBY: antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1394,7 +1560,7 @@
             </text>
         </query>
         <query name="flat_9" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,3; GROUPBY: antibody,cell)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1406,7 +1572,7 @@
             </text>
         </query>
         <query name="flat_10" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,3;GROUPBY: antibody,cell; aggregate: SUM(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1418,7 +1584,7 @@
             </text>
         </query>
         <query name="flat_11" time="short" target="flat">
-            <description>--</description>
+            <description>FLAT(1,3;GROUPBY: antibody,cell;aggregate: SUM(score),MIN(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>FLAT</tag>
@@ -1430,7 +1596,7 @@
             </text>
         </query>
         <query name="histogram_1" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,2)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1442,7 +1608,7 @@
             </text>
         </query>
         <query name="histogram_2" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1454,7 +1620,7 @@
             </text>
         </query>
         <query name="histogram_3" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1466,7 +1632,7 @@
             </text>
         </query>
         <query name="histogram_4" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(ANY,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1478,7 +1644,7 @@
             </text>
         </query>
         <query name="histogram_5" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(ANY,ALL)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1490,7 +1656,7 @@
             </text>
         </query>
         <query name="histogram_6" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(ALL,ANY)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1502,7 +1668,7 @@
             </text>
         </query>
         <query name="histogram_7" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,3; GROUPBY: antibody)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1514,7 +1680,7 @@
             </text>
         </query>
         <query name="histogram_8" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,3; GROUPBY: antibody,cell)</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1526,7 +1692,7 @@
             </text>
         </query>
         <query name="histogram_9" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,3;GROUPBY: antibody,cell;aggregate: SUM(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1538,7 +1704,7 @@
             </text>
         </query>
         <query name="histogram_10" time="short" target="histogram">
-            <description>--</description>
+            <description>HISTOGRAM(1,3;GROUPBY: antibody,cell; aggregate: SUM(score),MIN(score))</description>
             <tags>
                 <tag>SELECT</tag>
                 <tag>HISTOGRAM</tag>
@@ -1547,6 +1713,32 @@
                 E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
                 C = HISTOGRAM(1,3;GROUPBY: antibody,cell; aggregate: SUM(score),MIN(score)) E;
                 MATERIALIZE C into #OUTPUT%histogram_10#;
+            </text>
+        </query>
+        <query name="merge_1" time="short" target="merge">
+            <description>MERGE()</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MERGE</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = MERGE() E;
+                MATERIALIZE C into #OUTPUT%merge_1#;
+            </text>
+        </query>
+        <query name="merge_2" time="short" target="merge">
+            <description>MERGE(groupby: cell)</description>
+            <tags>
+                <tag>SELECT</tag>
+                <tag>MERGE</tag>
+                <tag>ANNA</tag>
+            </tags>
+            <text>
+                E = SELECT(NOT(leaveout=="something")) #INPUT%beds_in#;
+                C = MERGE(groupby: cell) E;
+                MATERIALIZE C into #OUTPUT%merge_2#;
             </text>
         </query>
     </queries>
